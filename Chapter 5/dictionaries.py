@@ -16,7 +16,10 @@ print(type(winner))
 
 # lists
 laundry = [1, 'shirt', 'pants', ['a', 'b', 'c'], winner]
+for l in laundry:
+    print(l)
 print(type(laundry))
+print(laundry[0])
 # <class 'list'>
 
 # dictionary
@@ -33,6 +36,10 @@ pet2 = {
     'breed': 'shiba',
     "name": 'rocky'
 }
+for p in pet:
+    if p in [133, 'type']:
+        print(p)
+
 print(type(pet))
 # <class 'dict'>
 
@@ -79,4 +86,6 @@ Example: JSON file
 with open('maps.json') as map_file:
     data = json.load(map_file)
     for marker in data["markers"]:
-        print(marker['name'])
+        if marker['name'] == 'Shangri-La Hotel':
+            print(marker['name'])
+            print(marker['location'][0])
